@@ -1,6 +1,6 @@
 class Ogp {
-    constructor(){
-        this.url = "";
+    constructor(mode?: 'default' | 'invite'){
+        this.url = "http://localhost:3000/";
         this.type = 'website';
         this.title = '';
         this.description = '';
@@ -8,6 +8,12 @@ class Ogp {
         this.image = 'https://i.imgur.com/0dEobiF.png';
         this.twcard = 'app';
         this.twsite = '@_amanojs';
+
+        if(mode && mode === 'default'){
+            this.setDefaultMode();
+        } else{
+            this.setInviteMode();
+        }
     }
 
     private url: string;
@@ -18,6 +24,16 @@ class Ogp {
     private image: string;
     private twcard: 'summary' | 'summary_large_image' | 'app' | 'player';
     private twsite: string;
+
+    private setDefaultMode(): void {
+        this.setTitle('Streaming!!');
+        this.setDescription('YouTubeの動画をみんなで同期視聴して楽しもう！');
+    }
+
+    private setInviteMode(): void {
+        this.setTitle('ルームに招待されています ~Streaming!!~');
+        this.setDescription('YouTubeの動画をみんなで同期視聴して楽しもう！');
+    }
 
     public setUrl(url: string): void {
         this.url = url;
