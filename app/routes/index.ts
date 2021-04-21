@@ -4,17 +4,17 @@ import Ogp from '../services/Ogp';
 const router = express.Router();
 
 export const mainRouter = () => {
-    router.get('/room', (req,res) => {
-        const ogp = new Ogp('invite');
-        res.status(200).render('index', {...ogp});
-    });
+  router.get('/room', (req, res) => {
+    const ogp = new Ogp('invite');
+    res.status(200).render('index', { ...ogp });
+  });
 
-    router.get('/', (req,res) => {
-        const ogp = new Ogp('default');
-        res.status(200).render('index', {...ogp});
-    });
-    return router;
-}
+  router.get('/', (req, res) => {
+    const ogp = new Ogp('default');
+    res.status(200).render('index', { ...ogp });
+  });
+  return router;
+};
 
 /* 
 ejs用ogp meta

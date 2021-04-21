@@ -1,5 +1,5 @@
 import express from 'express';
-const path = require('path');
+import path from 'path';
 const app = express();
 
 /** middleware setup */
@@ -8,7 +8,7 @@ setUpMiddleware(app);
 
 const port = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'client'))
+app.set('views', path.join(__dirname, 'client'));
 app.use('/', express.static(path.join(__dirname, 'client')));
 
 /** router setup */
