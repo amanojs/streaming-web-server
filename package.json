@@ -5,9 +5,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:t": "ts-node ./app/app.ts",
-    "start": "node ./build/app.js",
-    "build": "tsc --build"
+    "dev:s": "ts-node app/app.ts"
   },
   "repository": {
     "type": "git",
