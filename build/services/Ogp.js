@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Ogp {
     constructor(mode) {
-        this.url = 'http://localhost:3000/';
+        this.url = 'https://u-streaming.herokuapp.com/';
         this.type = 'website';
         this.title = '';
         this.description = '';
