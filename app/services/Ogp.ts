@@ -1,6 +1,6 @@
 class Ogp {
   constructor(mode?: 'default' | 'invite') {
-    this.url = 'http://localhost:3000/';
+    this.url = 'https://u-streaming.herokuapp.com/';
     this.type = 'website';
     this.title = '';
     this.description = '';
